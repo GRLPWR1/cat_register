@@ -5,41 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мой котик</title>
-    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1076/1076877.png" type="image/png">
-    <style>
-        img {
-            float: left;
-            margin-right: 5px;
-        }
-    </style>
+    <link rel="shortcut icon" href="./styles/images/paw_icon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
     <form>
         <p>
             <label for="nickname"><b>Кличка:</b></label>
             <br>
-            <img src="https://cdn-icons-png.flaticon.com/512/802/802404.png" alt="кот" height="20">
+            <img src="./styles/images/cat_muzzle_icon.png" alt="кот" height="20">
             <input type="text" placeholder="Кличка питомца" id="nickname" required>
         </p>
         <p>
-            <label for="name"><b>Имя владельца:</b></label>
+            <label for="ownersName"><b>Имя владельца:</b></label>
             <br>
-            <img src="https://cdn-icons-png.flaticon.com/512/3596/3596091.png" alt="визитка" height="20">
+            <img src="./styles/images/business_card_icon.png" alt="визитка" height="20">
             <input type="text" placeholder="Имя Фамилия" id="name" required>
         </p>
         <p>
             <b>Контакты:</b>
             <br>
-            <img src="https://cdn-icons.flaticon.com/png/512/3059/premium/3059408.png?token=exp=1659832515~hmac=a3cf3268d7649ac1a2651be7beb0943b" alt="телефон" height="20">
+            <img src="./styles/images/phone_icon.png" alt="телефон" height="20">
             <input type="tel" placeholder="Телефон">
             <br>
-            <img src="https://cdn-icons-png.flaticon.com/512/7610/7610917.png" alt="email" height="20">
+            <img src="./styles/images/email_icon.png" alt="email" height="20">
             <input type="email" placeholder="email" required> 
         </p>
         <p>
             <label for="breed"><b>Порода питомца:</b></label>
             <br>
-            <img src="https://cdn-icons.flaticon.com/png/512/2203/premium/2203919.png?token=exp=1659833503~hmac=4f8878cc62c2a7572051c6f1f4dddadd" alt="порода" height="20">
+            <img src="./styles/images/cat_fullbody_icon.png" alt="порода" height="20">
             <select name="cat-breeds" id="breed">
                 <option value="abyssinian">Абиссинская</option>
                 <option value="asian">Азиатская</option>
@@ -56,25 +52,25 @@
         </p>
         <p><b>Чем питается:</b>
             <br>
-            <img src="https://cdn-icons-png.flaticon.com/512/8156/8156232.png" alt="сухой корм" height="20">
+            <img src="./styles/images/dry_feed_icon.png" alt="сухой корм" height="20">
             <input type="checkbox" id="dryfeed">
             <label for="dryfeed">Сухой корм</label>
             <br>
-            <img src="https://cdn-icons-png.flaticon.com/512/7966/7966003.png" alt="влажный корм" height="20">
+            <img src="./styles/images/canned_catfood_icon.png" alt="влажный корм" height="20">
             <input type="checkbox" id="wetfeed">
             <label for="wetfeed">Влажный корм</label>
             <br>
-            <img src="https://cdn-icons-png.flaticon.com/512/4605/4605700.png" alt="натуральный корм" height="20">
+            <img src="./styles/images/drumstick_icon.png" alt="натуральный корм" height="20">
             <input type="checkbox" id="natural">
             <label for="natural">Натуральный корм</label>
         </p>
         <p>
             <label for="name"><b>Укажите пол питомца:</b></label>
             <br>
-            <img src="https://cdn-icons.flaticon.com/png/512/3573/premium/3573617.png?token=exp=1659836795~hmac=9396032d857f090da3d0ba67fcbad60a" alt="мужской пол" height="20">
+            <img src="./styles/images/male_icon.png" alt="мужской пол" height="20">
             <input type="radio" name="sex">Самец
             <br>
-            <img src="https://cdn-icons.flaticon.com/png/512/3877/premium/3877811.png?token=exp=1659836884~hmac=1cbde7473f7b369d7cfeb3ac3913cc14" alt="женский пол" height="20">
+            <img src="./styles/images/female_icon.png" alt="женский пол" height="20">
             <input type="radio" name="sex">Самка
         </p>
         <p><label for="comment"><b>Комментарий:</b></label>
@@ -83,28 +79,11 @@
         </p>
         <p><label for="file"><b>Можете добавить фото питомца:</b></label>
             <br>
-            <img src="https://cdn-icons.flaticon.com/png/512/2956/premium/2956744.png?token=exp=1659837504~hmac=d1ecc67eb3230e50bf586d806521a40f" alt="фото" height="20">
+            <img src="./styles/images/camera_icon.png" alt="фото" height="20">
             <input type="file" id="file">
         </p>
         <button><strong>Сохранить</strong></button>
     </form>
 </body>
-<script>
-    class Cat {
-        constructor (name, ownersName, tel, email, breed, feed, petsSex, comment, [img]) {
-            this.name = name;
-            this.ownersName = ownersName;
-            this.tel = tel;
-            this.email = email;
-            this.breed = breed;
-            this.feed = feed;
-            this.petsSex = petsSex;
-            this.comment = comment;
-            this.img = img;
-        }
-    }
-    button.onclick = function() {
-        let cat[i] = new Cat();
-    }
-</script>
+<script src="./index.js"></script>
 </html>
